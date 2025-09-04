@@ -6,7 +6,7 @@
 - Don't edit the signature of the functions, such as parameters and return values unless it's a bug or unused. Please use version control to manage changes.
 - Write clear declarative comments for the code.
 - Write unit tests for the functions.
-- Write clear usage in the README.md file.
+- Write clear usage in the README.md file or _examples folder.
 
 ### Committing
 
