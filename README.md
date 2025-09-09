@@ -16,11 +16,13 @@ go get -u github.com/SoeltanIT/agg-common-be
 - **Error Management**: Custom error types with HTTP status codes and error codes
 - **Request Validation**: Integration with go-playground/validator with custom translations
 - **Pagination**: Built-in support for paginated API responses
+- **Environment Variables**: Access to environment variables with fallback values
 
 ## Examples
 - [Custom Error](https://github.com/SoeltanIT/agg-common-be/blob/main/_examples/custom-error/main.go)
 - [Response Format](https://github.com/SoeltanIT/agg-common-be/blob/main/_examples/response/main.go)
 - [Validator](https://github.com/SoeltanIT/agg-common-be/blob/main/_examples/validator/main.go)
+- [Environment Variables](https://github.com/SoeltanIT/agg-common-be/blob/main/_examples/env/main.go)
 
 ## Response Format
 
