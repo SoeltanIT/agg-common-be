@@ -68,3 +68,7 @@ var (
 	// Error 5xx
 	ErrServerError = Error{HTTPStatus: http.StatusInternalServerError, Code: 5000001, Message: "An unexpected server error occurred. Please try again later."}
 )
+
+func ValidationError(message string) Error {
+	return NewError(http.StatusBadRequest, 4002999, message)
+}

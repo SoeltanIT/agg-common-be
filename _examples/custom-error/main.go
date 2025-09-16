@@ -16,4 +16,10 @@ func main() {
 	fmt.Println(err.HTTPStatus) // 403
 	fmt.Println(err.Code)       // 4030001
 	fmt.Println(err.Error())    // You do not have permission to access this resource
+
+	// Use ValidationError
+	validationErr := common.ValidationError("Invalid data")
+	fmt.Println(validationErr.HTTPStatus) // 400
+	fmt.Println(validationErr.Code)       // 4002999
+	fmt.Println(validationErr.Error())    // Invalid data
 }

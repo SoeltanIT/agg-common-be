@@ -156,3 +156,39 @@ func TestErrorIs(t *testing.T) {
 		})
 	}
 }
+
+func TestValidationError(t *testing.T) {
+	tests := []struct {
+		name     string
+		message  string
+		expected common.Error
+	}{
+		{
+			name:    "Validation error with message",
+			message: "test error",
+			expected: common.Error{
+				HTTPStatus: http.StatusBadRequest,
+				Code:       4002999,
+				Message:    "test error",
+			},
+		},
+		{
+			name:    "Validation error with empty message",
+			message: "",
+			expected: common.Error{
+				HTTPStatus: http.StatusBadRequest,
+				Code:       4002999,
+				Message:    "",
+			},
+		},
+	}
+
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			result := common.ValidationError(tt.message)
+			assert.Equal(t, tt.expected, result, "ValidationError should return correct error")
+			assert.Equal(t, tt.expected.HTTPStatus, result.HTTPStatus, "ValidationError should return correct HTTP status")
+			assert.Equal(t, tt.expected.Code, result.Code, "ValidationError should return correct code")
+		})
+	}
+}
