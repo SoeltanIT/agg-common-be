@@ -17,12 +17,14 @@ go get -u github.com/SoeltanIT/agg-common-be
 - **Request Validation**: Integration with go-playground/validator with custom translations
 - **Pagination**: Built-in support for paginated API responses
 - **Environment Variables**: Access to environment variables with fallback values
+- **User Context**: Extracting user information from JWT tokens stored in context
 
 ## Examples
 - [Custom Error](https://github.com/SoeltanIT/agg-common-be/blob/main/_examples/custom-error/main.go)
 - [Response Format](https://github.com/SoeltanIT/agg-common-be/blob/main/_examples/response/main.go)
 - [Validator](https://github.com/SoeltanIT/agg-common-be/blob/main/_examples/validator/main.go)
 - [Environment Variables](https://github.com/SoeltanIT/agg-common-be/blob/main/_examples/env/main.go)
+- [User Context](https://github.com/SoeltanIT/agg-common-be/blob/main/_examples/user-context/main.go)
 
 ## Response Format
 
@@ -67,3 +69,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - [Fiber v2](https://gofiber.io/) - Web framework
 - [Validator v10](https://github.com/go-playground/validator) - Struct validation
+- [JWT v5](https://github.com/golang-jwt/jwt) - JWT implementation

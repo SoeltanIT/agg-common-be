@@ -7,6 +7,7 @@ require (
 	github.com/go-playground/universal-translator v0.18.1
 	github.com/go-playground/validator/v10 v10.27.0
 	github.com/gofiber/fiber/v2 v2.52.9
+	github.com/golang-jwt/jwt/v5 v5.3.0
 	github.com/pkg/errors v0.9.1
 	github.com/stretchr/testify v1.8.4
 	github.com/valyala/fasthttp v1.51.0
