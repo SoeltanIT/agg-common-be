@@ -14,3 +14,11 @@ type JWTClaims struct {
 	Permissions     PermissionsDTO `json:"permissions"`
 	jwt.RegisteredClaims
 }
+
+type JWTClaimsSignature struct {
+	ClientId     string `json:"client_id"`
+	UserId       string `json:"user_id"`
+	SuperAgentId string `json:"super_agent_id"`
+	ClientSecret string `json:"client_secret"`
+	jwt.RegisteredClaims
+}

@@ -14,6 +14,7 @@ const (
 	RoleClient Role = "client"
 	RoleUser   Role = "user"
 )
+
 const (
 	PermissionDashboard          Permission = "dashboard"
 	PermissionReportPlayerActive Permission = "report_player_active"
