@@ -9,13 +9,13 @@ import (
 )
 
 type response struct {
-	HttpStatus int
-	Code       int                `json:"code,omitempty"`
-	Status     string             `json:"status,omitempty"`
-	Message    string             `json:"message,omitempty"`
-	Data       any                `json:"data,omitempty"`
-	Errors     interface{}        `json:"errors,omitempty"`
-	Pagination paginationResponse `json:"pagination,omitempty"`
+	HttpStatus int                 `json:"-"`
+	Code       int                 `json:"code,omitempty"`
+	Status     string              `json:"status,omitempty"`
+	Message    string              `json:"message,omitempty"`
+	Data       any                 `json:"data,omitempty"`
+	Errors     interface{}         `json:"errors,omitempty"`
+	Pagination *paginationResponse `json:"pagination,omitempty"`
 }
 
 // Response create new response instance
@@ -102,7 +102,7 @@ func (r *response) SetMessage(message string) *response {
 
 // SetPagination sets the pagination response
 func (r *response) SetPagination(pagination paginationResponse) *response {
-	r.Pagination = pagination
+	r.Pagination = &pagination
 	return r
 }
 
